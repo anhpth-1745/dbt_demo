@@ -1,0 +1,13 @@
+dbt_demo:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: learn-418702
+      dataset: learn_dbt
+      threads: 4
+      keyfile: learn-418702-f61762e4b920.json
+      timeout_seconds: 300
+      type: bigquery
+      retries: 1
